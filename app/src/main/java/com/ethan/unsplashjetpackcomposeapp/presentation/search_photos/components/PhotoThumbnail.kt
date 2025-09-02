@@ -1,5 +1,6 @@
 package com.ethan.unsplashjetpackcomposeapp.presentation.search_photos.components
 
+import android.R.attr.iconTint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -24,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.ethan.unsplashjetpackcomposeapp.domain.model.Photo
+import com.ethan.unsplashjetpackcomposeapp.presentation.components.CountLabel
 import com.ethan.unsplashjetpackcomposeapp.presentation.ui.theme.UnsplashJetpackComposeAppTheme
 
 @Composable
@@ -68,16 +70,11 @@ fun PhotoThumbnail(
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
-            Icon(
+            CountLabel(
                 imageVector = Icons.Default.Favorite,
-                contentDescription = "likes",
-                tint = Color.Magenta
-            )
-            Spacer(modifier = Modifier.width(5.dp))
-            Text(
-                text = photo.likes.toString(),
-                color = Color.White,
-                style = MaterialTheme.typography.bodySmall
+                count = photo.likes ?: 0,
+                iconTint = Color.Magenta,
+                color = Color.White
             )
         }
     }

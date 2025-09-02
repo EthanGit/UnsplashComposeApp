@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.ethan.unsplashjetpackcomposeapp.presentation.photo_detail.PhotoDetailScreen
 import com.ethan.unsplashjetpackcomposeapp.presentation.search_photos.SearchPhotosScreen
 import com.ethan.unsplashjetpackcomposeapp.presentation.ui.theme.UnsplashJetpackComposeAppTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
                         }
                         // 画像詳細表示画面
                         composable(route = ScreenRoute.PhotoDetailScreen.route + "/{photoId}") {
-
+                            PhotoDetailScreen()
                         }
                     }
                 }

@@ -20,7 +20,7 @@ class SearchPhotosViewModel @Inject constructor(
     private val _state = mutableStateOf(SearchPhotosState())
     val state: State<SearchPhotosState> = _state
 
-    var query by mutableStateOf("ueno")
+    var query by mutableStateOf("Taiwan")
 
     init {
         searchPhotos()

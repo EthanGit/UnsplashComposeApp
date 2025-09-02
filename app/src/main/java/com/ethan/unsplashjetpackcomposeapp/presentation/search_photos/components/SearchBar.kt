@@ -29,6 +29,7 @@ fun SearchBar(
     val keyboardController = LocalSoftwareKeyboardController.current
 
     TopAppBar(
+        modifier = Modifier.padding(end = 12.dp),
         title = {
             OutlinedTextField(
                 value = searchText,
